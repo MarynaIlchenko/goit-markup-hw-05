@@ -325,28 +325,36 @@ img {
     text-align: center;
 }
 
-.services-title-list {
+.services-title-list, .services-text-thumb {
     display: flex;
-    flex-wrap: wrap;
+    list-style: none;
     margin-left: -30px;
 }
 
-.services-title-item{
+.services-title-item, .services-item-thumb {
     flex-basis: calc(100% / 3 - 30px);
     margin-left: 30px;
 }
 
-.services-title-thumb{
-    position: relative;
+.services-thumb {
+    position: absolute;
+    bottom: 0;
 }
 
-.services-thumb{
-    position:absolute;
-    bottom: 0;
+.services-item-thumb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 370px;
     height: 70px;
     background: rgba(47, 48, 58, 0.8);
 }
+
+.services-images {
+    position: relative;
+    display: block;
+}
+
 .text-thumb{
     font-weight: 700;
     font-size: 14px;
