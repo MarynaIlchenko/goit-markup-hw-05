@@ -335,6 +335,30 @@ img {
     flex-basis: calc(100% / 3 - 30px);
     margin-left: 30px;
 }
+
+.services-title-thumb{
+    position: relative;
+}
+
+.services-thumb{
+    position:absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+}
+.text-thumb{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primery-title-color);
+    padding: 27px 0px;
+}
+
+
 /* ----------TEAM---------  */
 
 .team{
@@ -620,11 +644,17 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop .is-hidden{
+.backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal{
@@ -637,25 +667,25 @@ img {
     background-color: var(--primery-title-color);
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 4px;
-
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn{
+.modal > .close-btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8px;
-    margin-left: 8px;
-    top: 0;
-    left: 0;
     fill: #000000;
-
+    cursor: pointer;
 }
+
 
 
 /* ----------PORTFOLIO---------  */
