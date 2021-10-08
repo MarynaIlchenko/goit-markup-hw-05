@@ -325,45 +325,44 @@ img {
     text-align: center;
 }
 
-.services-title-list, .services-text-thumb {
+.services-title-list {
     display: flex;
     list-style: none;
     margin-left: -30px;
 }
 
-.services-title-item, .services-item-thumb {
+.services-title-item {
     flex-basis: calc(100% / 3 - 30px);
     margin-left: 30px;
 }
 
-.services-thumb {
+.text-thumb {
     position: absolute;
+    top: 224px;
+    left: 0;
+    right: 0;
     bottom: 0;
 }
 
-.services-item-thumb{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 370px;
-    height: 70px;
-    background: rgba(47, 48, 58, 0.8);
-}
-
-.services-images {
+.services-title-item {
     position: relative;
     display: block;
-}
+} 
 
-.text-thumb{
+.text-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
     color: var(--primery-title-color);
-    padding: 27px 0px;
+    margin-bottom: 0px;
 }
 
 
